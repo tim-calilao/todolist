@@ -36,6 +36,7 @@ urlpatterns = [
     # url(r'^$', auth_views.login, name = 'index'),
     url(r'^settings$', views.settings, name='settings'),
     url(r'^index$', views.index, name='index'),
+    url(r'^send$', views.sendMail, name='index'),
     url(r'^$', views.index, name='index'),
     url(r'^delete$', views.deleteView, name='delete'),
     #url(r'^tables.php$', views.tables, name='tables'),

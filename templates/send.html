@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}To-do Lists{% endblock %}
+{% block header %}Send Email <small>Send an email to subscribed users containing near-deadline activities.</small>{% endblock %}
+{% block content %}
+	{% if request.user.is_authenticated %}
+	    <form method="post" class="form-horizontal"> {% csrf_token %}
+            <div class="form-group col-sm-7">                
+                <input type="submit" value = "Send Email" class="btn btn-info">
+            </div>
+		</form>
+	{% endif %}
+{% endblock %}

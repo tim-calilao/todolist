@@ -20,7 +20,7 @@ def index(request):
 	#form_edit.fields['activity'].choices = [('hello','hello'),('world','world')]
 	#form_edit.fields['username'].value = str(request.user.username)
 	form_edit.fields['username'].queryset = User.objects.filter(username__exact=str(request.user.username))
-
+	print todolist.objects.filter(username__username=request.user.username).filter(activity__exact=request.POST.get('activity')).count()
 	if request.POST and form_edit.is_valid and todolist.objects.filter(username__username=request.user.username).filter(activity__exact=request.POST.get('activity')).count():
 		try:
 			instance_edit = todolist.objects.get(activity=request.POST.get('activity'))
@@ -53,11 +53,25 @@ def index(request):
 
 	return render(request, 'index.php', context)
 
-# def tables(request):
-# 	table = todolistTable(todolist.objects.filter(username__username = ""))
-# 	context = {'table' : table}
-	
-# 	return render(request, 'tables.php', context)
+def sendMail(request):
+	if request.POST:
+		tdl = todolist.objects.all().order_by('username')
+		todate = datetime.datetime.now()
+		email_message=""
+		ctr = 0
+		for i,c in enumerate(tdl):
+			email_message_h = "Hello "+str(tdl[i].username) +",\n"
+			if tdl[i].completed == False and tdl[i].deadline -  pytz.utc.localize(todate) <= datetime.timedelta(days=3):
+				if tdl[i].deadline <  pytz.utc.localize(todate):
+					email_message += "The activity "+str(tdl[i].activity)+" is past its deadline.\n"+str(tdl[i].activity)+"'s deadline: "+str(tdl[i].deadline)+"\n"+str(tdl[i].activity)+"'s notes: "+str(tdl[i].notes)+"\nIf you've already completed this activity, kindly check 'completed' in the respective activity.\nThis is an automated message so please don't reply to this email. If you want to stop receiving these notifications, login to your account and go to Settings. Under settings, leave the email address field blank and press 'Save'\n\n"
+				elif tdl[i].deadline -  pytz.utc.localize(todate) <= datetime.timedelta(days=3):
+					email_message += "The activity "+str(tdl[i].activity)+" is less than 3 days away.\n"+str(tdl[i].activity)+"'s deadline: "+str(tdl[i].deadline)+"\n"+str(tdl[i].activity)+"'s notes: "+str(tdl[i].notes)+"\nThis is an automated message so please don't reply to this email. If you want to stop receiving these notifications, login to your account and go to Settings. Under settings, leave the email address field blank and press 'Save'\n\n"
+				email_subject = "To-do List Notification"
+				email_from = "todolist.cpa@gmail.com"
+				email_to = [str(User.objects.get(username__exact=tdl[i].username).email)]
+				send_mail(email_subject, email_message_h + email_message, email_from, email_to, fail_silently=False)
+			
+	return render(request, 'send.html',{})
 
 
 def settings(request):
