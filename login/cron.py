@@ -4,13 +4,13 @@ from django.core.mail import send_mail
 import time, datetime, pytz
 
 class deadlineCheck(CronJobBase):
-    RUN_EVERY_MINS = 1440 # every 24 hours
+	RUN_EVERY_MINS = 1440 # every 24 hours
 
-    schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
-    code = 'deadlineCheck'    # a unique code
+	schedule = Schedule(run_every_mins=RUN_EVERY_MINS)
+	code = 'deadlineCheck'    # a unique code
 
-    def do(self):
-    	tdl = todolist.objects.all()
+	def do(self):
+		tdl = todolist.objects.all()
 		todate = datetime.datetime.now()
 
 		for i,c in enumerate(tdl):
@@ -26,3 +26,4 @@ class deadlineCheck(CronJobBase):
 				email_from = "todolist.cpa@gmail.com"
 				email_to = [str(User.objects.get(username__exact=tdl[i].username).email)]
 				send_mail(email_subject, email_message, email_from, email_to, fail_silently=False)
+

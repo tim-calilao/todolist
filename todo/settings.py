@@ -37,6 +37,11 @@ EMAIL_HOST_PASSWORD = '1Qwertyu'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+#for cron
+CRON_CLASSES=[
+    'login.cron.deadlineCheck'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
