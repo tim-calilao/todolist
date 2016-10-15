@@ -37,6 +37,9 @@ def index(request):
 		table = todolistTable(todolist.objects.filter(username__username = ""))
 		uname = "Guest. Please login first."
 
+	tdl = todolist.objects.all()
+	todate = datetime.datetime.now()
+
 	context = {
 		"template_title" : title,
 		"uname" : uname,
