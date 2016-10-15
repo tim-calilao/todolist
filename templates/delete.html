@@ -3,10 +3,11 @@
 {% load table_tags %}
 
 {% block title %}To-do Lists{% endblock %}
-{% block header %}Logged in as {{uname}}{% endblock %}
+{% block header %}Logged in as {{uname}}<small>{{smessage}}</small>{% endblock %}
 {% if request.user.is_authenticated %}
     {% block content %}
     {% render_table table %}
+    {% if user.is_authenticated %}
         <div class="row">
             <div class="col-lg-12">                            
                 <h1 class="page-header">
@@ -45,7 +46,7 @@
             </div>                                       
         </div>
 
-
+    {% endif %}
     <br><br>
     {% endblock %}
 {% endif %}

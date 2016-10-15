@@ -13,8 +13,10 @@ from django import forms
 # Create your views here.
 def index(request):
 	title = "Register"
+	uname = " Guest."
 	form_edit = todolistEditForm(request.POST or None)
 	edit_act = request.POST.get('activity')
+	smessage =  "Please login first."
 	#form_edit.fields['activity'].choices = [('hello','hello'),('world','world')]
 	#form_edit.fields['username'].value = str(request.user.username)
 	form_edit.fields['username'].queryset = User.objects.filter(username__exact=str(request.user.username))
@@ -34,9 +36,9 @@ def index(request):
 	if request.user.is_authenticated():
 		table = todolistTable(todolist.objects.filter(username__username=str(request.user.username)))
 		uname = str(request.user.username)
+		smessage = ""
 	else:
 		table = todolistTable(todolist.objects.filter(username__username = ""))
-		uname = "Guest. Please login first."
 
 	tdl = todolist.objects.all()
 	todate = datetime.datetime.now()
@@ -46,6 +48,7 @@ def index(request):
 		"uname" : uname,
 		'table' : table,
 		'form_edit': form_edit,
+		'smessage': smessage,
 	}
 
 	return render(request, 'index.php', context)
@@ -79,10 +82,28 @@ def settings(request):
 	return render(request, 'settings.php', context)
 
 def deleteView(request):
+	uname = "Guest."
+	smessage = " Please login first."
 	error_message = "There are currently no errors."
 	error_activities = []
 	if request.user.is_authenticated():
+		smessage = ""
+		uname = str(request.user.username)
 		table = todolistTable(todolist.objects.filter(username__username=str(request.user.username)))
+		if request.POST:
+			del_list = str(request.POST.get('deleted')).split(';')
+			if len(del_list) != len(set(del_list)):
+				error_message="Please remove all duplicates."
+			else:
+				for d in del_list:
+					try:
+						todolist.objects.get(activity__exact=d.strip()).delete()
+					except:
+						if not request.POST.get('deleted') == "":
+							error_message = "The following activities can't be found. Please check and try again."
+							error_activities.append(str(d))
+						else:
+							error_message = "Please don't leave the text box blank."
 	else:
 		table = todolistTable(todolist.objects.filter(username__username=""))
 	tdl = todolist.objects.filter(username__username=request.user.username)
@@ -90,26 +111,14 @@ def deleteView(request):
 	for i,c in enumerate(tdl):
 		print tdl[i]
 
-	if request.POST:
-		del_list = str(request.POST.get('deleted')).split(';')
-		if len(del_list) != len(set(del_list)):
-			error_message="Please remove all duplicates."
-		else:
-			for d in del_list:
-				try:
-					todolist.objects.get(activity__exact=d.strip()).delete()
-				except:
-					if not request.POST.get('deleted') == "":
-						error_message = "The following activities can't be found. Please check and try again."
-						error_activities.append(str(d))
-					else:
-						error_message = "Please don't leave the text box blank."
+	
 
 	context = {
 		'table':table,
-		'uname':request.user.username,
+		'uname':uname,
 		'error_message': error_message,
 		'error_activities': error_activities,
+		'smessage':  smessage,
 	}
 	return render(request,'delete.html',context)
 
