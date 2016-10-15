@@ -3,6 +3,9 @@
 {% block header %}Send Email <small>Send an email to subscribed users containing near-deadline activities.</small>{% endblock %}
 {% block content %}
 	{% if request.user.is_authenticated %}
+	<ul>
+		<li>If the sending fails, please wait for 15 minutes before trying again. </li>
+	</ul>
 	    <form method="post" class="form-horizontal"> {% csrf_token %}
             <div class="form-group col-sm-7">                
                 <input type="submit" value = "Send Email" class="btn btn-info">

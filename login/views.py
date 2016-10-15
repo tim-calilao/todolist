@@ -69,7 +69,7 @@ def sendMail(request):
 				email_subject = "To-do List Notification"
 				email_from = "todolist.cpa@gmail.com"
 				email_to = [str(User.objects.get(username__exact=tdl[i].username).email)]
-				send_mail(email_subject, email_message_h + email_message, email_from, email_to, fail_silently=False)
+				send_mail(email_subject, email_message_h + email_message, email_from, email_to, fail_silently=True)
 			
 	return render(request, 'send.html',{})
 
