@@ -1,0 +1,670 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"email",
+				"email_to"
+			],
+			[
+				"emai",
+				"email_from"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"tod",
+				"todolist"
+			],
+			[
+				"userna",
+				"username"
+			],
+			[
+				"username",
+				"username__username"
+			],
+			[
+				"todo",
+				"todolist"
+			],
+			[
+				"edit",
+				"form_edit"
+			],
+			[
+				"is",
+				"is_valid"
+			],
+			[
+				"to",
+				"todolist"
+			],
+			[
+				"us",
+				"username"
+			],
+			[
+				"Model",
+				"ModelChoiceField"
+			],
+			[
+				"usr",
+				"username"
+			],
+			[
+				"mode",
+				"models"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"clea",
+				"cleaned_data"
+			],
+			[
+				"all",
+				"all_entries"
+			],
+			[
+				"from",
+				"forminstance"
+			],
+			[
+				"E",
+				"EMAIL_HOST"
+			],
+			[
+				"he",
+				"help_text"
+			],
+			[
+				"form",
+				"forminstance"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"sign",
+				"SignUpForm"
+			],
+			[
+				"Sig",
+				"SignUp"
+			],
+			[
+				"strt",
+				"strtolower"
+			],
+			[
+				"inpu",
+				"input_answer"
+			],
+			[
+				"input",
+				"input_question"
+			],
+			[
+				"arr",
+				"array"
+			],
+			[
+				"que",
+				"question"
+			],
+			[
+				"count",
+				"count_query"
+			],
+			[
+				"match",
+				"matches2"
+			],
+			[
+				"mat",
+				"matches1"
+			],
+			[
+				"input_",
+				"input_answer"
+			],
+			[
+				"i",
+				"input_answer"
+			],
+			[
+				"add",
+				"addNew"
+			],
+			[
+				"inp",
+				"input_question"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"re",
+				"reload"
+			],
+			[
+				"reo",
+				"rowIndex"
+			],
+			[
+				"te",
+				"test"
+			],
+			[
+				"t",
+				"txt"
+			],
+			[
+				"row",
+				"rowIndex"
+			],
+			[
+				"cell",
+				"cellIndex"
+			],
+			[
+				"str",
+				"strQuestion"
+			],
+			[
+				"preg",
+				"preg_match_all"
+			],
+			[
+				"data",
+				"dataAnswer"
+			],
+			[
+				"dat",
+				"dataQuestion"
+			],
+			[
+				"inde",
+				"Index"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"cel",
+				"cellIndex"
+			],
+			[
+				"Cell",
+				"cellIndex"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"mysqli_f",
+				"mysqli_fetch_row"
+			],
+			[
+				"mysq",
+				"mysqli"
+			],
+			[
+				"mys",
+				"mysqli"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-anchor"
+			],
+			[
+				"backgroun",
+				"background-image"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"btn",
+				"btnAudio"
+			],
+			[
+				"b",
+				"btnImage"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"top",
+				"margin-top"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ret",
+				"retrieve"
+			],
+			[
+				"mysql_fe",
+				"mysql_fetch_row"
+			],
+			[
+				"db",
+				"dbpass"
+			],
+			[
+				"mysql",
+				"mysql_connect"
+			],
+			[
+				"Si",
+				"SignUpAdmin"
+			],
+			[
+				"aut",
+				"auto_now_add"
+			],
+			[
+				"dj",
+				"django19"
+			],
+			[
+				"d",
+				"django19"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"h",
+				"h1	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Project: Close"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/CPA/New folder/todo/todo/wsgi.py",
+		"/C/CPA/venv/todo/login/cron.py",
+		"/C/CPA/venv/todo/login/views.py",
+		"/C/CPA/venv/todo/login/tables.py",
+		"/C/CPA/venv/todo/todo/settings.py",
+		"/C/CPA/venv/todo/templates/index.php",
+		"/C/CPA/venv/Lib/site-packages/django_tables2/columns/base.py",
+		"/C/CPA/venv/Lib/site-packages/django_tables2/columns/checkboxcolumn.py",
+		"/C/CPA/venv/todo/login/forms.py",
+		"/C/CPA/venv/Lib/site-packages/django_tables2/rows.py",
+		"/C/CPA/venv/Lib/site-packages/django_tables2/tables.py",
+		"/C/CPA/venv/todo/templates/base.html",
+		"/C/CPA/venv/todo/templates/registration/login.html",
+		"/C/CPA/venv/todo/todo/urls.py",
+		"/C/CPA/venv/todo/templates/settings.php",
+		"/C/CPA/venv/todo/templates/register.html",
+		"/C/CPA/venv/todo/login/models.py",
+		"/C/CPA/venv/todo/templates/settings.html",
+		"/C/CPA/venv/todo/login/admin.py",
+		"/C/CPA/venv/todo/templates/navbar.html",
+		"/C/CPA/venv/todo/templates/index2.html",
+		"/C/CPA/venv/todo/templates/tables.php",
+		"/C/Users/Dan/Desktop/Tim Files/UC Downloads/Compressed/startbootstrap-sb-admin-gh-pages/sample/index.html",
+		"/C/CPA/venv/Lib/site-packages/django/contrib/auth/views.py",
+		"/C/CPA/venv/Lib/site-packages/django/contrib/auth/forms.py",
+		"/C/CPA/venv/Lib/site-packages/django/contrib/auth/models.py",
+		"/C/CPA/venv/Lib/site-packages/django_tables2/columns/booleancolumn.py",
+		"/C/CPA/venv/Lib/site-packages/django/forms/fields.py",
+		"/C/CPA/venv/Lib/site-packages/django/forms/forms.py",
+		"/C/Git/icaptcha/file-rename.php",
+		"/C/CPA/venv/Lib/site-packages/django/contrib/admin/apps.py",
+		"/C/CPA/venv/Lib/site-packages/django/contrib/admin/models.py",
+		"/C/Users/Dan/Desktop/sample/index.html",
+		"/C/CPA/venv/Lib/site-packages/django/contrib/admin/templates/admin/login.html",
+		"/C/CPA/venv/todo/templates/register.php",
+		"/C/CPA/venv/Lib/site-packages/table/columns/base.py",
+		"/C/CPA/venv/Lib/site-packages/table/templates/table/simple_table.html",
+		"/C/CPA/venv/Lib/site-packages/table/tests/test_tables.py",
+		"/C/CPA/venv/Lib/site-packages/table/tables.py",
+		"/C/CPA/venv/Lib/site-packages/table/templates/table/table.html",
+		"/C/CPA/venv/Lib/site-packages/table/views.py",
+		"/C/CPA/venv/Lib/site-packages/table/columns/datetimecolumn.py",
+		"/C/CPA/venv/Lib/site-packages/table/columns/checkboxcolumn.py",
+		"/C/CPA/venv/todo/templates/tables.html",
+		"/C/CPA/venv/todo/login/apps.py",
+		"/C/CPA/venv/todo/templates/index.html",
+		"/C/Users/Dan/Desktop/elndb/templates/home.html",
+		"/C/Users/Dan/Desktop/elndb/elndb/settings.py",
+		"/C/Users/Dan/Desktop/elndb/signUp/models.py",
+		"/C/Users/Dan/Desktop/elndb/signUp/views.py",
+		"/C/Users/Dan/Desktop/elndb/templates/base.html",
+		"/C/Users/Dan/Desktop/elndb/signUp/forms.py",
+		"/C/Users/Dan/Desktop/elndb/signUp/tests.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/elndb/settings.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/Lib/site-packages/django/db/models/base.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/Lib/site-packages/django/contrib/gis/db/backends/spatialite/base.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/elndb/urls.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/signUp/views.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/signUp/admin.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/testing/admin.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/testing/views.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/signUp/models.py",
+		"/C/wamp/www/icaptcha/cms.php",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/testing/models.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/templates/home.html",
+		"/C/Users/Little Garden/Desktop/djangoproject/elndb/testing/templates/home.html",
+		"/C/wamp/www/icaptcha/input.php",
+		"/C/wamp/www/icaptcha/style.css",
+		"/C/wamp/www/icaptcha/index.php",
+		"/C/wamp/www/icaptcha/login.php",
+		"/C/wamp/www/icaptcha/scripts/cms_script.js",
+		"/C/wamp/www/icaptcha/phpFiles/add.php",
+		"/C/wamp/www/icaptcha/phpFiles/database_a.php",
+		"/C/wamp/www/icaptcha/phpFiles/database.php",
+		"/C/wamp/www/icaptcha/cms_a.php",
+		"/C/wamp/www/icaptcha/scripts/cmsa_script.js",
+		"/C/wamp/www/icaptcha/phpFiles/delete.php",
+		"/C/wamp/www/icaptcha/phpFiles/updatedb.php",
+		"/C/Python27/Lib/functools.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/djangolec02/manage.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/djangolec01/djangolec01/urls.py",
+		"/C/Users/Little Garden/Desktop/djangoproject/djangolec01/djangolec01/settings.py",
+		"/C/gitprojects/FirstAndroidApp_AfternoonClass/app/src/main/java/com/mlabs/bbm/firstandroidapp/signup.java",
+		"/C/gitprojects/FirstAndroidApp_AfternoonClass/app/src/main/java/com/mlabs/bbm/firstandroidapp/DBHelper.java",
+		"/C/wamp/www/icaptcha/bootstrap/js/bootstrap-datagrid.js",
+		"/C/Users/Little Garden/Downloads/dbAccounts.db",
+		"/C/wamp/www/College of Law1/scripts/index.js",
+		"/C/wamp/www/College of Law1/scripts/jquery.jOrgChart.js",
+		"/C/wamp/www/College of Law1/scripts/jquery.nicescroll.js",
+		"/C/wamp/www/icaptcha/image.php",
+		"/C/wamp/www/icaptcha/scripts/script.js",
+		"/C/wamp/www/icaptcha/phpFiles/checkAns.php",
+		"/C/wamp/www/icaptcha/jquery/script.js",
+		"/C/wamp/www/icaptcha/stylesheet.css",
+		"/C/wamp/www/jQuery/index.php",
+		"/C/wamp/www/iCAPTCHA/jquery/jquery-ui.min.js",
+		"/C/wamp/www/College of Law1/Index.php",
+		"/C/Users/Little Garden/AppData/Local/Temp/Rar$DIa0.278/captcha.php",
+		"/C/wamp/www/College of Law1/StudentOrg.php",
+		"/C/wamp/www/iCAPTCHA/stylesheet.css",
+		"/E/GarenaLoLPH/GameData/Apps/LoLPH/Air/lol.properties",
+		"/C/wamp/www/dean/dean/deanspage.php",
+		"/C/wamp/www/iCAPTCHA/main.php",
+		"/C/wamp/www/iCAPTCHA/index.php",
+		"/C/Users/Little Garden/Downloads/Fisher-Yates shuffle.html",
+		"/C/wamp/www/iCAPTCHA/scripts/script.js",
+		"/C/wamp/www/iCAPTCHA/scripts/main.php",
+		"/C/wamp/www/jQuery/script.js",
+		"/C/Users/Little Garden/Desktop/django/src/newsletter/admin.py",
+		"/C/Users/Little Garden/Desktop/django/src/newsletter/forms.py",
+		"/C/Users/Little Garden/Desktop/django/src/db.sqlite3",
+		"/C/Users/Little Garden/Desktop/django/src/newsletter/views.py",
+		"/C/Users/Little Garden/Desktop/django/src/django19/settings.py",
+		"/C/Users/Little Garden/Desktop/django/src/newsletter/models.py",
+		"/C/Users/Little Garden/Desktop/django/src/django19/urls.py",
+		"/C/Users/Little Garden/Desktop/django/src/templates/home.html",
+		"/C/Users/Little Garden/Desktop/django/src/newsletter/templates/home.html",
+		"/C/Python27/Scripts/test.py",
+		"/C/wamp/www/jQuery/stylesheet.css",
+		"/C/wamp/www/jQuery/script/script.js",
+		"/C/wamp/www/jQuery/style/style.css",
+		"/C/wamp/www/xml/test.xml"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"sys",
+			"[i]",
+			"(?:\\w)\\+",
+			"tdl",
+			"addform",
+			"%}",
+			" }}",
+			"id",
+			"user",
+			"userna",
+			"regist",
+			"model",
+			"form",
+			"required",
+			"username",
+			"required",
+			"Regsiter",
+			"authe",
+			"html",
+			"login",
+			"user",
+			"attr",
+			"todolist",
+			"%}\n",
+			"static",
+			"SignUp",
+			"login",
+			"already ex",
+			"model",
+			"already ex",
+			"unique",
+			"import",
+			"max_lenght",
+			"%",
+			"number",
+			"`",
+			"count",
+			"cout",
+			"alert",
+			"location.reload",
+			"location.rea",
+			"<?",
+			"alert",
+			"cms_scripts",
+			"count",
+			"https://icaptcha2.azurewebsites.net/",
+			"acsm_af0f08532c7e6fe",
+			"fadeOut",
+			"47C9AF",
+			"100px",
+			"draggable",
+			"f",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"tdl[i]",
+			")+",
+			"str(",
+			"SignUp",
+			"",
+			"questions"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 199.0,
+	"status_bar_visible": true
+}

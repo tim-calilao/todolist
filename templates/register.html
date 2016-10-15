@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block header %}Registration{% endblock %}
+{% block content %}
+<form method="POST" action="" class="form-horizontal">{% csrf_token %}
+    <div class="form-group">
+   {{form.as_p}}
+   <input type="submit" value = "Sign Up" class="btn btn-default">
+   </div>
+</form>
+{% endblock %}
