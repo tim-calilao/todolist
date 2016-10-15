@@ -74,6 +74,9 @@ def settings(request):
 			instance = User.objects.get(username__exact=request.user.username)
 			form = emailForm(request.POST, instance = instance)
 			form.save()
+			context['message'] = "This feature is currently disabled"
+			if User.objects.values_list('email', flat=True).get(username__exact=request.user.username):
+				context['message'] = "This feature is currently enabled"
 
 			
 	else:
