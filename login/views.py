@@ -7,6 +7,7 @@ from .forms import SignUpForm, todolistForm
 from django.contrib.auth.models import User
 import time, datetime, pytz
 from django.core.mail import send_mail
+from django import forms
 
 
 # Create your views here.
@@ -76,6 +77,41 @@ def settings(request):
 		context['message'] = "Please Login first"
 
 	return render(request, 'settings.php', context)
+
+def deleteView(request):
+	error_message = "There are currently no errors."
+	error_activities = []
+	if request.user.is_authenticated():
+		table = todolistTable(todolist.objects.filter(username__username=str(request.user.username)))
+	else:
+		table = todolistTable(todolist.objects.filter(username__username=""))
+	tdl = todolist.objects.filter(username__username=request.user.username)
+	
+	for i,c in enumerate(tdl):
+		print tdl[i]
+
+	if request.POST:
+		del_list = str(request.POST.get('deleted')).split(';')
+		if len(del_list) != len(set(del_list)):
+			error_message="Please remove all duplicates."
+		else:
+			for d in del_list:
+				try:
+					todolist.objects.get(activity__exact=d.strip()).delete()
+				except:
+					if not request.POST.get('deleted') == "":
+						error_message = "The following activities can't be found. Please check and try again."
+						error_activities.append(str(d))
+					else:
+						error_message = "Please don't leave the text box blank."
+
+	context = {
+		'table':table,
+		'uname':request.user.username,
+		'error_message': error_message,
+		'error_activities': error_activities,
+	}
+	return render(request,'delete.html',context)
 
 # def tablesTable(request):	
 # 	to_do_table = todolistTable(todolist.objects.all())

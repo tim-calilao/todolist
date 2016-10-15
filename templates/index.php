@@ -13,17 +13,22 @@
                     Add/Edit Activities<br>
                 </h1>
                 <ul>
-                    <li>To add an activity, use a new and unique activity name
-                    <li>To edit an existing activity, use the same activity name
-                    <li>Deadline Format: YYYY-MM-DD or YYYY-MM-DD HH:MM
+                    <li>To add an activity, use a new and unique activity name</li>
+                    <li>To edit an existing activity, use the same activity name</li>
+                    <li>Deadline Format: YYYY-MM-DD or YYYY-MM-DD HH:MM</li>
                 </ul>                                               
         </div>
-    </div class="row">
-    <form method="post" class="form-horizontal"> {% csrf_token %}
-        <div class="form-group col-sm-7">
-            {{ form_edit.as_p }}
-            <input type="submit" value = "Save" class="btn btn-info">
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <br>
+            <form method="post" class="form-horizontal"> {% csrf_token %}
+                <div class="form-group col-sm-7">
+                    {{ form_edit.as_p }}
+                    <input type="submit" value = "Save" class="btn btn-info">
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
     {% endblock %}
 {% endif %}

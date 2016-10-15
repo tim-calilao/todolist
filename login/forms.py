@@ -40,7 +40,17 @@ class todolistEditForm(forms.ModelForm):
 	notes = models.TextField(max_length = 10000, null = True, blank = False)
 	deadline = forms.DateTimeField()
 
+	def clean_activity(self):
+		activity = self.cleaned_data.get('activity')
+		if ';' in activity:
+			raise forms.ValidationError(u'Activity name cannot contain semi-colon(s).')
+
+		return activity
+
 class emailForm(forms.ModelForm):
 	class Meta:
 		model = User
 		fields = ["email"]
+
+
+
