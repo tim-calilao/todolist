@@ -86,6 +86,8 @@ def settings(request):
 		context['form'] = form
 		if User.objects.values_list('email', flat=True).get(username__exact=request.user.username):
 			context['message'] = "This feature is currently enabled"
+			form = emailForm(request.POST or None, initial={'email':User.objects.values_list('email', flat=True).get(username__exact=request.user.username)})
+			context['form'] = form
 
 		if form.is_valid() and request.POST:
 			instance = User.objects.get(username__exact=request.user.username)
