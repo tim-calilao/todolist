@@ -21,17 +21,20 @@ def index(request):
 	#form_edit.fields['username'].value = str(request.user.username)
 	form_edit.fields['username'].queryset = User.objects.filter(username__exact=str(request.user.username))
 	print todolist.objects.filter(username__username=request.user.username).filter(activity__exact=request.POST.get('activity')).count()
-	if request.POST and form_edit.is_valid and todolist.objects.filter(username__username=request.user.username).filter(activity__exact=request.POST.get('activity')).count():
+	if request.POST and form_edit.is_valid() and todolist.objects.filter(username__username=request.user.username).filter(activity__exact=request.POST.get('activity')).count():
 		try:
 			instance_edit = todolist.objects.get(activity=request.POST.get('activity'))
 			form_edit = todolistEditForm(request.POST, instance = instance_edit)
 			form_edit.save()
+			form_edit.fields['username'].queryset = User.objects.filter(username__exact=str(request.user.username))
 		except Exception as e:
 		    print '%s (%s)' % (e.message, type(e))
-	elif request.POST and form_edit.is_valid and not request.POST.get('activity')==None:
+		    form_edit.fields['username'].queryset = User.objects.filter(username__exact=str(request.user.username))
+	elif request.POST and form_edit.is_valid() and not request.POST.get('activity')==None:
 		instance = form_edit.save(commit=False)
 		instance.save()
-	
+		form_edit.fields['username'].queryset = User.objects.filter(username__exact=str(request.user.username))
+
 
 	if request.user.is_authenticated():
 		table = todolistTable(todolist.objects.filter(username__username=str(request.user.username)))
@@ -70,7 +73,7 @@ def sendMail(request):
 				email_from = "todolist.cpa@gmail.com"
 				email_to = [str(User.objects.get(username__exact=tdl[i].username).email)]
 				send_mail(email_subject, email_message_h + email_message, email_from, email_to, fail_silently=True)
-			
+
 	return render(request, 'send.html',{})
 
 
@@ -92,7 +95,7 @@ def settings(request):
 			if User.objects.values_list('email', flat=True).get(username__exact=request.user.username):
 				context['message'] = "This feature is currently enabled"
 
-			
+
 	else:
 		context['message'] = "Please Login first"
 
@@ -124,11 +127,11 @@ def deleteView(request):
 	else:
 		table = todolistTable(todolist.objects.filter(username__username=""))
 	tdl = todolist.objects.filter(username__username=request.user.username)
-	
+
 	for i,c in enumerate(tdl):
 		print tdl[i]
 
-	
+
 
 	context = {
 		'table':table,
@@ -139,7 +142,7 @@ def deleteView(request):
 	}
 	return render(request,'delete.html',context)
 
-# def tablesTable(request):	
+# def tablesTable(request):
 # 	to_do_table = todolistTable(todolist.objects.all())
 # 	context = {
 # 		'table' : to_do_table

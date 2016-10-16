@@ -18,7 +18,7 @@ class users(models.Model):
 class todolist(models.Model):
 	username = models.ForeignKey(User, on_delete=models.CASCADE)
 	completed = models.BooleanField()
-	activity = models.CharField(max_length = 256, primary_key=True)
+	activity = models.CharField(max_length = 256)#, primary_key=True
 	notes = models.TextField(max_length = 10000, null = True, blank = False)
 	deadline = models.DateTimeField(auto_now = False, auto_now_add = False, blank = True)
 
