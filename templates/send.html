@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}To-do Lists{% endblock %}
-{% block header %}Send Email <small>Send an email to subscribed users containing near-deadline activities.</small>{% endblock %}
+{% block header %}Send Email <small>Send an email to subscribed users that have near-deadline activities.</small>{% endblock %}
 {% block content %}
 	{% if request.user.is_authenticated %}
 	<h4>If the sending fails, please wait for 15 minutes before trying again.</h4><br>
